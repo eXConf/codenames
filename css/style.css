@@ -45,6 +45,7 @@ hr {
   font-weight: 700;
   background-size: cover;
   background-position: center;
+  text-shadow: #FCDFB6 1px 1px 0, #FCDFB6 -1px -1px 0, #FCDFB6 -1px 1px 0, #FCDFB6 1px -1px 0;
 }
 
 .settings {

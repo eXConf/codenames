@@ -3,7 +3,7 @@ var colors = []
 var wordbase = []
 var clipboard = {red: [], blue: [], neutral: [], assassin: []}
 var schemeShowed = false
-var imagesShowed = false
+var imagesShowed = true
 var firstToGo = ""
 var cssColors = {red: "#f44336", blue: "#2196f3", neutral: "#a1887f", assassin: "#424242"}
 var cssURLs = {red: "http://oi67.tinypic.com/9jmwqv.jpg", blue: "http://oi65.tinypic.com/29qo9vm.jpg", neutral: "http://oi67.tinypic.com/5lqwrq.jpg", assassin: "http://oi65.tinypic.com/2j4ovit.jpg"}
@@ -579,10 +579,12 @@ function updateBoard(funcName) {
     
     if (imagesShowed) {
       $(this).css("background-image", "url(" + cssURLs[bgType] + ")");
+      $(this).css("color", "#000");
     }
     else {
       $(this).css("background-image", "none");
       $(this).css("background-color", cssColors[bgType]);
+      $(this).css("color", "#000");
     }
   })
 }

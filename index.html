@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CodeNames modal</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <hr />
+<div class="container">
+  <div class="board">
+    <div class="row">
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+    </div>
+    <div class="row">
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+    </div>
+    <div class="row">
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+    </div>
+    <div class="row">
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+    </div>
+    <div class="row">
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+      <div class="cell">some text</div>
+    </div>
+  </div> <!-- end of board -->
+  
+
+  
+  <div class="settings">
+    
+    <div class="left">
+      <div id="generate-btn" class="my-button" onclick="generateWords()">Генерировать слова</div>
+      <div class="my-button" id="switchImages">Включить картинки</div>
+    </div>
+    
+    <div class="right">
+      <div id="switch-scheme" class="my-button"><a id="switchScheme" class="js-open-modal" href="#" data-modal-id="popup">Показать схему </a></div>
+    </div>
+</div>
+
+<div id="popup" class="modal-box">  
+  <div class="modal-body">
+
+  </div>
+  <footer>
+    <div class="my-button" id="clipboard">Показать текст</div>
+    <div class="my-button" id="modal-scheme">Показать схему</div>
+    <div class="my-button"><a href="#" class="js-modal-close">Закрыть</a></div>
+  </footer>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

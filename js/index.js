@@ -705,3 +705,38 @@ $(window).resize(function() {
 $(window).resize();
 
 });
+
+//HOTKEYS
+
+function hideCustomWordsInput() {
+  $("#customWords").css("display", "none");
+}
+
+function showCustomWordsInput() {
+  $("#customWords").css("display", "block");
+}
+
+
+
+document.onkeydown = function(e) {
+  if (e.keyCode == 27) { // escape
+    hideCustomWordsInput();
+    return false;
+  }
+
+  if (e.keyCode == 49) {
+    showCustomWordsInput();
+    
+    return false;
+  }
+};
+
+$("#addWords").click(function() {
+    var userWords = document.getElementById("userWords").value.split(/\n/);
+    originwordbase = originwordbase.concat(userWords);
+})
+
+$("#replaceWords").click(function() {
+    var userWords = document.getElementById("userWords").value.split(/\n/);
+    originwordbase = userWords.slice();
+})

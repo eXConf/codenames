@@ -188,3 +188,12 @@ a, a:hover, a:visited {
 #switch-scheme {
   background-color: #f0ad4e;
 }
+
+#customWords {
+  margin: 0 auto;
+  display: none;
+}
+
+#footer {
+  margin: 40px 0px;
+}

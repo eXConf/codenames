@@ -719,7 +719,7 @@ function showCustomWordsInput() {
 
 function KeyPress(e) {
       var evtobj = window.event? event : e
-      if (evtobj.keyCode == 96 && evtobj.ctrlKey) {
+      if (evtobj.keyCode == 97 && evtobj.ctrlKey) {
     showCustomWordsInput();
     return false;
   };

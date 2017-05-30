@@ -729,8 +729,8 @@ document.onkeydown = KeyPress;
 
 
 document.onkeydown = function(e) {
-  if (e.keyCode == 49) {
-    showCustomWordsInput();
+  if (e.keyCode == 27) {
+    hideCustomWordsInput();
     return false;
   }
 };

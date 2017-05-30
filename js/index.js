@@ -719,21 +719,17 @@ function showCustomWordsInput() {
 
 function KeyPress(e) {
       var evtobj = window.event? event : e
-      if (evtobj.keyCode == 97 && evtobj.ctrlKey) {
+      if (evtobj.keyCode == 65 && evtobj.ctrlKey && evtobj.shiftKey) {
     showCustomWordsInput();
     return false;
   };
-}
-
-document.onkeydown = KeyPress;
-
-
-document.onkeydown = function(e) {
-  if (e.keyCode == 27) {
+  if (evtobj.keyCode == 27) {
     hideCustomWordsInput();
     return false;
   }
-};
+}
+
+document.onkeydown = KeyPress;
 
 $("#addWords").click(function() {
     var userWords = document.getElementById("userWords").value.split(/\n/);

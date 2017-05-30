@@ -717,16 +717,20 @@ function showCustomWordsInput() {
 }
 
 
+function KeyPress(e) {
+      var evtobj = window.event? event : e
+      if (evtobj.keyCode == 49 && evtobj.ctrlKey) {
+    showCustomWordsInput();
+    return false;
+  };
+}
+
+document.onkeydown = KeyPress;
+
 
 document.onkeydown = function(e) {
-  if (e.keyCode == 27) { // escape
-    hideCustomWordsInput();
-    return false;
-  }
-
   if (e.keyCode == 49) {
     showCustomWordsInput();
-    
     return false;
   }
 };

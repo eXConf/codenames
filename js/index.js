@@ -754,3 +754,59 @@ $("#replaceWords").click(function() {
     var userWords = document.getElementById("userWords").value.split(/\n/);
     originwordbase = userWords.slice();
 })
+
+//TIMER HERE
+
+var sessionLength = 180;
+var sessionLengthDefault = sessionLength;
+var timerActive = false;
+
+
+
+function timerSession() {
+  var minutes = parseInt(sessionLength / 60, 10);
+  var seconds = parseInt(sessionLength % 60, 10);
+  var seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  $(".timer-time").html(minutes + ":" + seconds);
+  
+  if (--sessionLength < 0) {
+    clearInterval(sessionTimer);
+    timerActive = false;
+    sessionLength = sessionLengthDefault;
+  }
+}
+
+
+$(document).ready(function() {
+  $(".timer-minus").click(function() {
+    if (sessionLength >= 60 && timerActive === false) {
+      sessionLength -= 60;
+      sessionLengthDefault -= 60;
+      $(".timer-time").html(parseInt(sessionLength / 60) + ":00");
+    }
+  });
+  
+  $(".timer-plus").click(function() {
+    if (timerActive === false) {
+      sessionLength += 60;
+      sessionLengthDefault += 60;
+      $(".timer-time").html(parseInt(sessionLength / 60) + ":00");
+    }    
+  });
+  
+   $(".timer-play").click(function() {
+     sessionTimer = setInterval(timerSession, 1000);
+     timerActive = true;
+  });
+  
+  $(".timer-stop").click(function() {
+     clearInterval(sessionTimer);
+     timerActive = false;
+  });
+  
+  $(".timer-refresh").click(function() {
+     sessionLength = sessionLengthDefault;
+  });
+  
+});

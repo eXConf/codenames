@@ -796,13 +796,17 @@ $(document).ready(function() {
   });
   
    $(".timer-play").click(function() {
-     sessionTimer = setInterval(timerSession, 1000);
-     timerActive = true;
+     if (!timerActive) {
+       sessionTimer = setInterval(timerSession, 1000);
+       timerActive = true;
+     }
   });
   
   $(".timer-stop").click(function() {
-     clearInterval(sessionTimer);
-     timerActive = false;
+     if (timerActive) {
+       clearInterval(sessionTimer);
+       timerActive = false;
+     }
   });
   
   $(".timer-refresh").click(function() {

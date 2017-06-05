@@ -202,6 +202,12 @@ a, a:hover, a:visited {
   font-size: 30px;
   color: black;
   padding: 0px 5px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;  
 }
 
 .timer-time {

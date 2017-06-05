@@ -197,3 +197,35 @@ a, a:hover, a:visited {
 #footer {
   margin: 40px 0px;
 }
+
+.timer {
+  font-size: 30px;
+  color: black;
+  padding: 0px 5px;
+}
+
+.timer-time {
+  color: #7b3c03;
+}
+
+.timer-minus {
+  font-weight: 900;
+}
+
+.timer:hover {
+  cursor: pointer;
+}
+
+.timer-time:hover {
+  cursor: default;
+}
+
+.timer-container {
+  display: inline-block;
+  padding: 7px 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 60px;
+}

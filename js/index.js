@@ -813,6 +813,7 @@ $(document).ready(function() {
      sessionLength = sessionLengthDefault;
     if (!timerActive) {
       sessionTimer = setInterval(timerSession, 1000);
+      timerActive = true;
     }
   });
   

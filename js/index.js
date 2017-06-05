@@ -780,7 +780,7 @@ function timerSession() {
 
 $(document).ready(function() {
   $(".timer-minus").click(function() {
-    if (sessionLength >= 60 && timerActive === false) {
+    if (sessionLength >= 60 && !timerActive) {
       sessionLength -= 60;
       sessionLengthDefault -= 60;
       $(".timer-time").html(parseInt(sessionLength / 60) + ":00");
@@ -788,7 +788,7 @@ $(document).ready(function() {
   });
   
   $(".timer-plus").click(function() {
-    if (timerActive === false) {
+    if (!timerActive) {
       sessionLength += 60;
       sessionLengthDefault += 60;
       $(".timer-time").html(parseInt(sessionLength / 60) + ":00");
@@ -811,6 +811,9 @@ $(document).ready(function() {
   
   $(".timer-refresh").click(function() {
      sessionLength = sessionLengthDefault;
+    if (!timerActive) {
+      sessionTimer = setInterval(timerSession, 1000);
+    }
   });
   
 });

@@ -782,17 +782,17 @@ function timerSession() {
 $(document).ready(function() {
   $(".timer-minus").click(function() {
     if (sessionLength >= 60 && !timerActive) {
-      sessionLength = parseInt(sessionLength / 60) - 60;
+      sessionLength = parseInt(sessionLength / 60) * 60 - 60;
       sessionLengthDefault = sessionLength;
-      $(".timer-time").html(sessionLength + ":00");
+      $(".timer-time").html(sessionLength / 60 + ":00");
     }
   });
   
   $(".timer-plus").click(function() {
     if (!timerActive) {
-      sessionLength = parseInt(sessionLength / 60) + 60;
+      sessionLength = parseInt(sessionLength / 60) * 60 + 60;
       sessionLengthDefault = sessionLength;
-      $(".timer-time").html(sessionLength + ":00");
+      $(".timer-time").html(sessionLength / 60 + ":00");
     }    
   });
   

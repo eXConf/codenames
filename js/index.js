@@ -764,13 +764,14 @@ var timerActive = false;
 
 
 function timerSession() {
+  --sessionLength;
   var minutes = parseInt(sessionLength / 60, 10);
   var seconds = parseInt(sessionLength % 60, 10);
   var seconds = seconds < 10 ? "0" + seconds : seconds;
 
   $(".timer-time").html(minutes + ":" + seconds);
   
-  if (--sessionLength < 0) {
+  if (sessionLength == 0) {
     clearInterval(sessionTimer);
     timerActive = false;
     sessionLength = sessionLengthDefault;
